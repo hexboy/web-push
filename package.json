@@ -1,0 +1,18 @@
+{
+  "name": "web-push",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "send": "node send-push.js",
+    "generate-keys": "web-push generate-vapid-keys --json",
+    "serve": "serve . --ssl-cert ./cert/devlocal-combined.crt --ssl-key ./cert/devlocal.key"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.1",
+    "web-push": "^3.6.6"
+  }
+}
