@@ -4,17 +4,22 @@ const isSupported = () =>
   'PushManager' in window;
 
 window.addEventListener('load', () => {
+  const swEl = document.querySelector('#serviceworker-result');
   const preEl = document.querySelector('#subscription-result');
-  if (isSupported()) {
+  try {
     navigator.serviceWorker
       .register('./sw.js')
       .then(function (registration) {
-        console.log('Service worker successfully registered.');
+        swEl.innerHTML = 'Service worker successfully registered.';
         console.log(registration);
       })
       .catch(function (err) {
-        console.error('Unable to register service worker.', err);
+        swEl.innerHTML = 'Unable to register service worker. ' + err.message;
       });
+  } catch (error) {
+    swEl.innerHTML = err.message;
+  }
+  if (isSupported()) {
     preEl.innerHTML = '✅ Push is supported on this browser.';
   } else {
     preEl.innerHTML =
