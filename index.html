@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.json" />
     <title>Push Test</title>
     <style>
       pre {
@@ -18,11 +36,14 @@
   </head>
   <body>
     <button onclick="subscribe()">Subscribe</button>
+    <pre id="serviceworker-result">subscription result</pre>
     <pre id="subscription-result">subscription result</pre>
-    <pre>const vapidKeys = {
+    <pre>
+const vapidKeys = {
       publicKey:
         'BHxNcNBtdplYp81tOBnkl9o1SbLUXvgp782uttUEoFYfkKwns8UMtG53etpJDV64QzJsk5slO0B7dAwshJ9Im30',
       privateKey: '575_C8ZPGIVTKZJQIJSyQ7DxqCAA-sAFhJEi6edoiWU',
-    };</pre>
+    };</pre
+    >
   </body>
 </html>
